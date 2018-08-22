@@ -1,0 +1,8 @@
+// WinHex license file
+
+Name: "linholer"
+Addr1: "linholer@qq.com"
+Addr2: "Cracked by linholer"
+Key1: "2E2230B055DD0D81535F1DDA6494C693"
+Key2: "3C968E5C34332C6CFA85F0142A511EA2"
+Cksm: "4ECCD695"

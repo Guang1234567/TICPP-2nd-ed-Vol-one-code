@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 # cc1plus.exe: warning: command line option '-Wmissing-prototypes' is valid for C/ObjC but not for C++
 # set(GCC_COVERAGE_COMPILE_FLAGS "-Wall -Wextra -Wconversion -Wcast-qual -Wshadow -Wpointer-arith -Wunreachable-code -Wstrict-prototypes -Wmissing-prototypes")
 add_definitions(${GXX_COVERAGE_COMPILE_FLAGS})
-set(GXX_COVERAGE_COMPILE_FLAGS "-Wall -Wextra -Wconversion -Wcast-qual -Wshadow -Wpointer-arith -Wunreachable-code -Wstrict-prototypes")
+set(GXX_COVERAGE_COMPILE_FLAGS "-Wall -Wextra -Wconversion -Wcast-qual -Wshadow -Wpointer-arith -Wunreachable-code")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GXX_COVERAGE_COMPILE_FLAGS}" )
 
 include_directories(.)
@@ -34,3 +34,13 @@ add_executable(static_cast C03/static_cast.cpp)
 add_executable(PointersAndBrackets C03/PointersAndBrackets.cpp)
 
 add_executable(ArrayArguments C03/ArrayArguments.cpp)
+
+add_executable(CommandLineArgs C03/CommandLineArgs.cpp)
+
+add_executable(ArgsToInts C03/ArgsToInts.cpp)
+
+add_executable(FloatingAsBinary C03/FloatingAsBinary.cpp C03/printBinary.cpp)
+
+add_executable(Specify C03/Specify.cpp)
+
+add_executable(PointerArithmetic C03/PointerArithmetic.cpp)

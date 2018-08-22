@@ -9,6 +9,11 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-  for(int i = 1; i < argc; i++)
-    cout << atoi(argv[i]) << endl;
+    cout << "--------" <<  argv[0] << "--------" << endl;
+  cout << "--------" <<  atoi(argv[0]) << "--------" << endl;
+
+  for(int i = 1; i < argc; i++) {
+      cout << '-' << atoi(argv[i]) << '-' << endl;
+      cout << '-' << atof(argv[i]) << '-' << endl;
+  }
 } ///:~
