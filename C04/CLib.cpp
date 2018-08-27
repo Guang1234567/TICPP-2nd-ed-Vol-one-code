@@ -13,22 +13,26 @@ using namespace std;
 // when increasing storage:
 const int increment = 100;
 
+typedef unsigned char Byte;
+
 void initialize(CStash* s, int sz) {
-  s->size = sz;
-  s->quantity = 0;
-  s->storage = 0;
-  s->next = 0;
+  s->size = sz;     // 每个元素占的字节数
+  s->quantity = 0;  // 内存空间的总字节数
+  s->storage = 0;   // 指向内存空间的字节数组指针
+  s->next = 0;     //  下一个空的用于存放新元素的存储空间的下标
 }
 
 int add(CStash* s, const void* element) {
   if(s->next >= s->quantity) //Enough space left?
     inflate(s, increment);
+
   // Copy element into storage,
   // starting at next empty space:
   int startBytes = s->next * s->size;
-  unsigned char* e = (unsigned char*)element;
+  const Byte* e = (const Byte*)element;
   for(int i = 0; i < s->size; i++)
     s->storage[startBytes + i] = e[i];
+
   s->next++;
   return(s->next - 1); // Index number
 }
@@ -51,7 +55,7 @@ void inflate(CStash* s, int increase) {
   int newQuantity = s->quantity + increase;
   int newBytes = newQuantity * s->size;
   int oldBytes = s->quantity * s->size;
-  unsigned char* b = new unsigned char[newBytes];
+  Byte* b = new Byte[newBytes];
   for(int i = 0; i < oldBytes; i++)
     b[i] = s->storage[i]; // Copy old to new
   delete [](s->storage); // Old storage
@@ -62,6 +66,6 @@ void inflate(CStash* s, int increase) {
 void cleanup(CStash* s) {
   if(s->storage != 0) {
    cout << "freeing storage" << endl;
-   delete []s->storage;
+   delete [](s->storage);
   }
 } ///:~

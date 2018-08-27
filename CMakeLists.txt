@@ -44,3 +44,7 @@ add_executable(FloatingAsBinary C03/FloatingAsBinary.cpp C03/printBinary.cpp)
 add_executable(Specify C03/Specify.cpp)
 
 add_executable(PointerArithmetic C03/PointerArithmetic.cpp)
+
+add_executable(ComplicatedDefinitions C03/ComplicatedDefinitions.cpp)
+
+add_executable(CLibTest C04/CLibTest.cpp C04/CLib.cpp)

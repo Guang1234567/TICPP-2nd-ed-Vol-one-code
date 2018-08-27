@@ -22,7 +22,7 @@ long long DoubleToHex(double HEX)//双精度浮点数到十六进制
 }
 
 float HexToFloat(unsigned char bytes[4]) {
-    return *((float *) bytes);
+    return *(reinterpret_cast<float *> (bytes));
 }
 
 /**
