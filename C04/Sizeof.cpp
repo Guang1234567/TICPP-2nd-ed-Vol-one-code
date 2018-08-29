@@ -20,6 +20,8 @@ struct B {
 void B::f() {}
 
 int main() {
+  cout << "sizeof int = " << sizeof(int)
+       << " bytes" << endl;
   cout << "sizeof struct A = " << sizeof(A)
        << " bytes" << endl;
   cout << "sizeof struct B = " << sizeof(B)

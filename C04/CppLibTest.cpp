@@ -25,7 +25,8 @@ int main() {
   Stash stringStash;
   const int bufsize = 80;
   stringStash.initialize(sizeof(char) * bufsize);
-  ifstream in("CppLibTest.cpp");
+  ifstream in("../C04/CppLibTest.cpp"); // run on clion with cmake
+  //ifstream in("CppLibTest.cpp");
   assure(in, "CppLibTest.cpp");
   string line;
   while(getline(in, line))

@@ -48,3 +48,11 @@ add_executable(PointerArithmetic C03/PointerArithmetic.cpp)
 add_executable(ComplicatedDefinitions C03/ComplicatedDefinitions.cpp)
 
 add_executable(CLibTest C04/CLibTest.cpp C04/CLib.cpp)
+
+add_executable(CppLibTest C04/CppLibTest.cpp C04/CppLib.cpp)
+
+add_executable(Sizeof C04/Sizeof.cpp C04/CppLib.cpp C04/CLib.cpp)
+
+add_executable(StackTest C04/StackTest.cpp C04/CppLib.cpp C04/Stack.cpp)
+
+add_executable(NestFriend C05/NestFriend.cpp)

@@ -13,12 +13,12 @@ using namespace std;
 
 long FloatToHex(float HEX)//单精度浮点数到十六进制
 {
-    return *((long *) &HEX);
+    return *(reinterpret_cast<long *> (&HEX));
 }
 
 long long DoubleToHex(double HEX)//双精度浮点数到十六进制
 {
-    return *((long long *) &HEX);
+    return *(reinterpret_cast<long long *> (&HEX));
 }
 
 float HexToFloat(unsigned char bytes[4]) {

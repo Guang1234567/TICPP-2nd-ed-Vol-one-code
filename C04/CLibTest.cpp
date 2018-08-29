@@ -31,7 +31,8 @@ int main() {
          << endl;
   // Holds 80-character strings:
   initialize(&stringStash, sizeof(char)*bufsize);
-  in.open("CLibTest.cpp");
+  in.open("../C04/CLibTest.cpp"); // run on clion with cmake
+  // in.open("CLibTest.cpp");
   assert(in);
   while(getline(in, line))
     add(&stringStash, line.c_str());
