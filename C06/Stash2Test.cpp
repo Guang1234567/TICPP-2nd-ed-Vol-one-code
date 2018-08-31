@@ -22,11 +22,11 @@ int main() {
          << endl;
   const int bufsize = 80;
   Stash stringStash(sizeof(char) * bufsize);
-  ifstream in("Stash2Test.cpp");
+  ifstream in("../C06/Stash2Test.cpp");
   assure(in, " Stash2Test.cpp");
   string line;
   while(getline(in, line))
-    stringStash.add((char*)line.c_str());
+    stringStash.add(line.c_str());
   int k = 0;
   char* cp;
   while((cp = (char*)stringStash.fetch(k++))!=0)

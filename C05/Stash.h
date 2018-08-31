@@ -17,7 +17,7 @@ class Stash {
 public:
   void initialize(int size);
   void cleanup();
-  int add(void* element);
+  int add(const void* element);
   void* fetch(int index);
   int count();
 };

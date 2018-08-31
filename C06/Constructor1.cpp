@@ -21,7 +21,7 @@ Tree::Tree(int initialHeight) {
 }
 
 Tree::~Tree() {
-  cout << "inside Tree destructor" << endl;
+  cout << "inside Tree destructor : " << this << endl;
   printsize();
 }
 
@@ -40,6 +40,7 @@ int main() {
     cout << "after Tree creation" << endl;
     t.printsize();
     t.grow(4);
+    Tree t2(7788);
     cout << "before closing brace" << endl;
   }
   cout << "after closing brace" << endl;

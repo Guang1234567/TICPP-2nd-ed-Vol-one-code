@@ -27,7 +27,7 @@ include_directories(C15)
 include_directories(C16)
 
 
-add_executable(sizeof C03/sizeof.cpp)
+add_executable(sizeof_C03 C03/sizeof.cpp)
 
 add_executable(static_cast C03/static_cast.cpp)
 
@@ -49,10 +49,24 @@ add_executable(ComplicatedDefinitions C03/ComplicatedDefinitions.cpp)
 
 add_executable(CLibTest C04/CLibTest.cpp C04/CLib.cpp)
 
-add_executable(CppLibTest C04/CppLibTest.cpp C04/CppLib.cpp)
+add_executable(CppLibTest_C04 C04/CppLibTest.cpp C04/CppLib.cpp)
 
 add_executable(Sizeof C04/Sizeof.cpp C04/CppLib.cpp C04/CLib.cpp)
 
 add_executable(StackTest C04/StackTest.cpp C04/CppLib.cpp C04/Stack.cpp)
 
 add_executable(NestFriend C05/NestFriend.cpp)
+
+add_executable(CppLibTest_C05 C05/CppLibTest.cpp C05/CppLib.cpp)
+
+add_executable(TestSharePointer C05/TestSharePointer.cpp)
+
+add_executable(Boolean C03/Boolean.cpp)
+
+add_executable(Constructor1 C06/Constructor1.cpp)
+
+add_executable(Nojump C06/Nojump.cpp)
+
+add_executable(Stash2Test C06/Stash2Test.cpp C06/Stash2.cpp C06/Stash2.h)
+
+add_executable(AutoDefaultConstructor C06/AutoDefaultConstructor.cpp)

@@ -17,5 +17,11 @@ int main() {
   cout << ", sizeof(i1) = " << sizeof(i2); // as size as long type
   cout << ", sizeof(j) = " << sizeof(j);
 
+  int arr[] = {7,8,9,10};
+  cout << ", sizeof(arr) = " << sizeof(arr);
+  cout << ", sizeof(*arr) = " << sizeof(*arr);
+
+  cout << ", sizeof(arr) / sizeof(*arr) = " << sizeof(arr) / sizeof(*arr);
+
   return EXIT_SUCCESS;
 } ///:~

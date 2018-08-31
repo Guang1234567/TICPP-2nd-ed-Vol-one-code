@@ -17,7 +17,7 @@ class Stash {
 public:
   Stash(int size);
   ~Stash();
-  int add(void* element);
+  int add(const void* element);
   void* fetch(int index);
   int count();
 };
