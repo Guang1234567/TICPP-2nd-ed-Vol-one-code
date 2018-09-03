@@ -33,13 +33,13 @@ Stash::~Stash() {
   }
 }
 
-int Stash::add(void* element) {
+int Stash::add(const void* element) {
   if(next >= quantity) // Enough space left?
     inflate(increment);
   // Copy element into storage,
   // starting at next empty space:
   int startBytes = next * size;
-  unsigned char* e = (unsigned char*)element;
+  const unsigned char* e = (const unsigned char*)element;
   for(int i = 0; i < size; i++)
     storage[startBytes + i] = e[i];
   next++;

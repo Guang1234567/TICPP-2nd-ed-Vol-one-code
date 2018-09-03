@@ -70,3 +70,9 @@ add_executable(Nojump C06/Nojump.cpp)
 add_executable(Stash2Test C06/Stash2Test.cpp C06/Stash2.cpp C06/Stash2.h)
 
 add_executable(AutoDefaultConstructor C06/AutoDefaultConstructor.cpp)
+
+add_executable(Stash3Test C07/Stash3Test.cpp C07/Stash3.cpp C07/Stash3.h)
+
+add_executable(SuperVar C07/SuperVar.cpp)
+
+add_executable(MemTest C07/MemTest.cpp C07/MyString.cpp C07/Mem.cpp)

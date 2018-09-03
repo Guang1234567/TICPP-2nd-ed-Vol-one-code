@@ -5,34 +5,40 @@
 // Copyright notice in Copyright.txt
 #include "Mem.h"
 #include <cstring>
+
 using namespace std;
 
-Mem::Mem() { mem = 0; size = 0; }
-
-Mem::Mem(int sz) {
-  mem = 0;
-  size = 0;
-  ensureMinSize(sz); 
+Mem::Mem() {
+    mem = 0;
+    size = 0;
 }
 
-Mem::~Mem() { delete []mem; }
-
-int Mem::msize() { return size; }
-
-void Mem::ensureMinSize(int minSize) {
-  if(size < minSize) {
-    byte* newmem = new byte[minSize];
-    memset(newmem + size, 0, minSize - size);
-    memcpy(newmem, mem, size);
-    delete []mem;
-    mem = newmem;
-    size = minSize;
-  }
+Mem::Mem(size_t sz) {
+    mem = 0;
+    size = 0;
+    ensureMinSize(sz);
 }
 
-byte* Mem::pointer() { return mem; }
+Mem::~Mem() { delete[]mem; }
 
-byte* Mem::pointer(int minSize) {
-  ensureMinSize(minSize);
-  return mem; 
+size_t Mem::msize() { return size; }
+
+void Mem::ensureMinSize(size_t minSize) {
+    if (size < minSize) {
+        byte *newmem = new byte[minSize];
+        memset(newmem + size, 0, minSize - size);
+        memcpy(newmem, mem, size);
+        delete[]mem;
+        mem = newmem;
+        size = minSize;
+    }
+}
+
+byte *Mem::pointer() {
+    return mem;
+}
+
+byte *Mem::pointer(size_t minSize) {
+    ensureMinSize(minSize);
+    return mem;
 } ///:~

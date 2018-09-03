@@ -5,18 +5,31 @@
 // Copyright notice in Copyright.txt
 #ifndef MEM_H
 #define MEM_H
+
+#include <cstdlib>
+
 typedef unsigned char byte;
 
 class Mem {
-  byte* mem;
-  int size;
-  void ensureMinSize(int minSize);
+    byte *mem;
+    size_t size;
+
+    void ensureMinSize(size_t minSize);
+
 public:
-  Mem();
-  Mem(int sz);
-  ~Mem();
-  int msize();
-  byte* pointer();
-  byte* pointer(int minSize);
-}; 
-#endif // MEM_H ///:~
+    Mem();
+
+    Mem(size_t sz);
+
+    ~Mem();
+
+    size_t msize();
+
+    byte *pointer();
+
+    byte *pointer(size_t minSize);
+};
+
+#endif  // MEM_H
+
+///:~

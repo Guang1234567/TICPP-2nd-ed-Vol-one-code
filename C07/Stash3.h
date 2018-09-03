@@ -18,7 +18,7 @@ public:
   Stash(int size); // Zero quantity
   Stash(int size, int initQuantity);
   ~Stash();
-  int add(void* element);
+  int add(const void* element);
   void* fetch(int index);
   int count();
 };
